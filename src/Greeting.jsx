@@ -1,5 +1,9 @@
-function Greeting() {
-  return <h1>&ldquo;Hey there!&rdquo; he said sarcastically.</h1>
+function Greeting({start, end}) {
+  return (
+    <>
+      <h1>{start} I&rsquo;m learning React{end}</h1>
+    </>
+  )
 }
 
 export default Greeting;
