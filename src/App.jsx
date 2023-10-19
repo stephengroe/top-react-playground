@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Greeting from './Greeting'
+import Person from './Person'
+import Clock from './Clock'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +29,18 @@ function App() {
 
   return (
     <>
+      <Person
+        key={"default"}
+        start={"Default: "}
+        end={"."}
+        style={{
+          color: "blue",
+          fontSize: "2rem",
+        }}
+        />
+
+        <Clock />
+
       {greetings.map(greeting => {
         return (
         <Greeting

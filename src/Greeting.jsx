@@ -1,7 +1,9 @@
-function Greeting({start, end}) {
+function Greeting({start, end, style}) {
   return (
     <>
-      <h1>{start} I&rsquo;m learning React{end}</h1>
+      <h2
+      style={style}
+      >{start} I&rsquo;m learning React{end}</h2>
     </>
   )
 }
