@@ -5,48 +5,18 @@ import Person from './Person'
 import Clock from './Clock'
 
 function App() {
-  const greetings = [
-    {
-      id: "cowboy",
-      start: "Howdy!",
-      end: ", pard'ner!"
-    },
-    {
-      id: "elvis",
-      start: "Good evening, ladies and gentlemen.",
-      end: ". Thank you, thank you very much."
-    },
-    {
-      id: "tigger",
-      start: "Yohoohoohoo!",
-      end: ", ta-ta for now!"
-    }
-  ];
+  const [heading, setHeading] = useState('Greetings!');
+
+  const clickHandler = () => {
+    setHeading('Salutations!');
+  }
 
   return (
     <>
-      <Person
-        key={"default"}
-        start={"Default: "}
-        end={"."}
-        style={{
-          color: "blue",
-          fontSize: "2rem",
-        }}
-        />
-
-        <Clock />
-
-      {greetings.map(greeting => {
-        return (
-        <Greeting
-          key={greeting.id}
-          start={greeting.start}
-          end={greeting.end}
-          style={color: 'blue'}
-         />
-        )
-      })}
+    <button type='button' onClick={clickHandler}>
+      Click me!
+    </button>
+    <h1>{heading}</h1>
     </>
   )
 }
