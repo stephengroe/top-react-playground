@@ -43,6 +43,7 @@ function App() {
           key={greeting.id}
           start={greeting.start}
           end={greeting.end}
+          style={color: 'blue'}
          />
         )
       })}
