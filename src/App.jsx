@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react'
-import './App.css'
-import Greeting from './Greeting'
-import Person from './Person'
-import Clock from './Clock'
+import { useState } from 'react';
+import { Link } from "react-router-dom";
+import './App.css';
+import Greeting from './Greeting';
+import Person from './Person';
+import Clock from './Clock';
 
 function App() {
   const [heading, setHeading] = useState('Greetings!');
@@ -20,6 +21,11 @@ function App() {
     <h1>{heading}</h1>
     <Greeting start="Howdy!" />
     <Clock />
+
+    <h2>Sitelinks:</h2>
+    <ul>
+      <li><Link to='profile'>Profile Page</Link></li>
+    </ul>
     </>
   )
 }
