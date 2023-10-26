@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Profile from './Profile.jsx';
 import App from './App.jsx';
 import './index.css';
+import User from './User.jsx';
+import Interests from './Interests.jsx';
+import DefaultUser from './DefaultUser.jsx';
 
 const router = createBrowserRouter([
   {
@@ -11,8 +14,13 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: '/profile',
+    path: '/profile/:name',
     element: <Profile />,
+    children: [
+      { index: true, element: <DefaultUser />, },
+      { path: 'user', element: <User />, },
+      { path: 'interests', element: <Interests />, },
+    ],
   },
 ]);
 
