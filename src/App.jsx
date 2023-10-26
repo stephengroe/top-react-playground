@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react'
 import './App.css'
 import Greeting from './Greeting'
@@ -17,6 +18,8 @@ function App() {
       Click me!
     </button>
     <h1>{heading}</h1>
+    <Greeting start="Howdy!" />
+    <Clock />
     </>
   )
 }
