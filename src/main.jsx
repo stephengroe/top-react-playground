@@ -7,11 +7,13 @@ import './index.css';
 import User from './User.jsx';
 import Interests from './Interests.jsx';
 import DefaultUser from './DefaultUser.jsx';
+import ErrorPage from './ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
     path: '/profile/:name',
