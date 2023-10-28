@@ -18,7 +18,7 @@ const DefaultUser = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (error) return <p>Uh-oh, there was a network error.</p>;
+  if (error) return <p>Uh-oh, there was a network error. {error}</p>;
   if (loading) return <p>Loading...</p>;
 
   return (
