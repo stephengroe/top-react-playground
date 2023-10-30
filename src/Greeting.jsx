@@ -1,12 +1,18 @@
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import React from 'react';
+import { AppContext } from './App';
 
 function Greeting({start, end, style}) {
+  const { userName } = useContext(AppContext);
+
   return (
-    <h2
-      style={style}
-      >{start} I&rsquo;m learning React{end}
-    </h2>
+    <>
+      <h3>Welcome, {userName}!</h3>
+      <h2
+        style={style}
+        >{start} I&rsquo;m learning React{end}
+      </h2>
+    </>
   )
 }
 
