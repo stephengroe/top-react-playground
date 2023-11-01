@@ -32,6 +32,7 @@ function App() {
       <h2>Sitelinks:</h2>
       <ul>
         <li><Link to='profile'>Profile Page</Link></li>
+        <li><Link to='profile/person'>Profile Page</Link></li>
       </ul>
     </AppContext.Provider>
   )
